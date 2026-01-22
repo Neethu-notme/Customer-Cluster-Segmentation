@@ -42,11 +42,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load Model files
-std = joblib.load("C:/Users/neeth/Downloads/model_file/scaler.pkl")
-pca = joblib.load("C:/Users/neeth/Downloads/model_file/pca.pkl")
-kmeans = joblib.load("C:/Users/neeth/Downloads/model_file/kmeans.pkl")
+std = joblib.load("scaler.pkl")
+pca = joblib.load("pca.pkl")
+kmeans = joblib.load("kmeans.pkl")
 
-with open("C:/Users/neeth/Downloads/model_file/features.json", "r") as f:
+with open("features.json", "r") as f:
     scl_features = json.load(f)
 
 # Feature Engineering
@@ -168,3 +168,4 @@ if st.button("Predict Clusters"):
             mime="text/csv"
 
         )
+
